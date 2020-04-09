@@ -39,11 +39,11 @@
        <tbody>
            <tr>
                <td>설계</td>
-               <td style="background-color:#F7DF1E">-</td>
-               <td style="background-color:#F7DF1E">-</td>
-               <td style="background-color:#F7DF1E;">-</td>
-               <td style="background-color:#F7DF1E;">-</td>
-               <td style="background-color:#F7DF1E;">-</td>
+               <td style="background-color:#F7DF1E;">✓-</td>
+               <td style="background-color:#F7DF1E;">✓</td>
+               <td style="background-color:#F7DF1E;">✓</td>
+               <td style="background-color:#F7DF1E;">✓</td>
+               <td style="background-color:#F7DF1E;">✓</td>
                <td></td>
                <td></td>
                <td></td>
@@ -58,12 +58,12 @@
                <td></td>
                <td></td>
                <td></td>
-               <td style="background-color:#F7DF1E;">-</td>
-               <td style="background-color:#F7DF1E;">-</td>
-               <td style="background-color:#F7DF1E;">-</td>
-               <td style="background-color:#F7DF1E;">-</td>
-               <td style="background-color:#F7DF1E;">-</td>
-               <td style="background-color:#F7DF1E;">-</td>
+               <td style="background-color:#F7DF1E;">✓</td>
+               <td style="background-color:#F7DF1E;">✓</td>
+               <td style="background-color:#F7DF1E;">✓</td>
+               <td style="background-color:#F7DF1E;">✓</td>
+               <td style="background-color:#F7DF1E;">✓</td>
+               <td style="background-color:#F7DF1E;">✓</td>
                <td></td>
                <td></td>
            </tr>
@@ -79,8 +79,8 @@
                <td></td>
                <td></td>
                <td></td>
-               <td style="background-color:#F7DF1E;">-</td>
-               <td style="background-color:#F7DF1E;">-</td>
+               <td style="background-color:#F7DF1E;">✓</td>
+               <td style="background-color:#F7DF1E;">✓</td>
            </tr>
        </tbody>
    </table>
