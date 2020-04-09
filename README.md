@@ -12,11 +12,15 @@
 
 2. 프로젝트 일정 계획
 
-| ㄴㅁㅇㅁㅇ | test ||
-| :--------: | ---- | ---- |
-|            |      |      |
-|            |      |      |
-|            |      |      |
+|             |          Grouping           ||
+First Header  | Second Header | Third Header |
+    ------------ | :-----------: | -----------: |
+Content       |          *Long Cell*        ||
+Content       |   **Cell**    |         Cell |
+
+New section   |     More      |         Data |
+And more      | With an escaped '\|'         ||  
+[Prototype table]
 
 
    <table>
