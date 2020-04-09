@@ -39,7 +39,7 @@
        <tbody>
            <tr>
                <td>설계</td>
-               <td style="background-color:#F7DF1E;">✓-</td>
+               <td style="background-color:#F7DF1E;">✓</td>
                <td style="background-color:#F7DF1E;">✓</td>
                <td style="background-color:#F7DF1E;">✓</td>
                <td style="background-color:#F7DF1E;">✓</td>
