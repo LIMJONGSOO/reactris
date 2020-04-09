@@ -12,17 +12,6 @@
 
 2. 프로젝트 일정 계획
 
-|             |          Grouping           ||
-First Header  | Second Header | Third Header |
-    ------------ | :-----------: | -----------: |
-Content       |          *Long Cell*        ||
-Content       |   **Cell**    |         Cell |
-
-New section   |     More      |         Data |
-And more      | With an escaped '\|'         ||  
-[Prototype table]
-
-
    <table>
        <thead>
            <tr>
@@ -50,8 +39,8 @@ And more      | With an escaped '\|'         ||
        <tbody>
            <tr>
                <td>설계</td>
-               <td style="background-color:#F7DF1E"></td>
-               <td style="background-color:#F7DF1E"></td>
+               <td><div style="background-color:#F7DF1E"></div></td>
+               <td style="background-color:#F7DF1E">-</td>
                <td style="background-color:#F7DF1E;"></td>
                <td style="background-color:#F7DF1E;"></td>
                <td style="background-color: black;"></td>
