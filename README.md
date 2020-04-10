@@ -88,7 +88,7 @@
    
 
 3.  참고
-
+   ![image-20200411004702844](./wireframe.JPG)
    - [설계 및 퍼블리싱](https://www.figma.com/file/yoOCik1e4GCMHbwmjjotMC/Tetris-Toy-Project-of--limjs?node-id=0%3A1)
    - [repository](https://github.com/LIMJONGSOO/Tetris.git)
 
