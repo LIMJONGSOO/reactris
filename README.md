@@ -3,6 +3,8 @@
 # Tetris Toy Project of limjs
 
 
+목표
+React의 Virtual DOM Rendering & Component 이해
 
 1. 프로젝트 설명
 
