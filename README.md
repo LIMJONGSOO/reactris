@@ -1,10 +1,12 @@
 
+# reactris
 
 # Tetris Toy Project of limjs
 
 
 목표
-React의 Virtual DOM Rendering & Component 이해
+- React의 Virtual DOM Rendering & Component 구조 이해
+- figma로 기획 및 퍼블리싱 경험
 
 1. 프로젝트 설명
 
