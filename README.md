@@ -89,7 +89,7 @@ React의 Virtual DOM Rendering & Component 이해
 
    
 3. wireframe 설계 및 퍼블리싱
-   ![image-20200411004702844](./wireframe.JPG)
+   ![wireframe](./wireframe.JPG)
    
 4.  참고
    - [설계 및 퍼블리싱](https://www.figma.com/file/yoOCik1e4GCMHbwmjjotMC/Tetris-Toy-Project-of--limjs?node-id=0%3A1)
