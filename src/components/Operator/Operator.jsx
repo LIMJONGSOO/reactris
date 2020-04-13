@@ -4,3 +4,5 @@ import './Operator.css';
 class Operator extends Component {
 
 }
+
+export default Operator;
