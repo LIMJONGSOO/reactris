@@ -1,20 +1,16 @@
 .board {
-    position: absolute;
-    width: 100%;
-    height: 600px;
-    left: 20px;
-    top: 25px;
+    position: relative;
+    width: 360px;
+    height: 640px;
     margin:auto;
 }
 
 .boardarea {
     position: absolute;
     width: 320px;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-
+    height: 600px;
+    left: 20px;
+    top: 25px;
     background: #F7DF1E;
     border-radius: 26px;
 }

@@ -4,3 +4,5 @@ import './Tetromino.css';
 class Tetromino extends Component {
 
 }
+
+export default Tetromino;

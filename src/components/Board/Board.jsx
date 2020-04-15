@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './Board.css';
-import Title from '../Title/Title'
+import Title from '../Title/Title';
+import Tetris from '../Tetris/Tetris';
 
 class Board extends Component {
     constructor(props) {
@@ -19,6 +20,7 @@ class Board extends Component {
             <div className="board">
                 <div className="boardarea">
                     <Title />
+                    <Tetris />
                 </div>
             </div>
         );
