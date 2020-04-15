@@ -4,7 +4,9 @@ import './Tetromino.css';
 class Tetromino extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            tetrominoTable: Array.from(Array(4), () => Array.from(Array(2), () => 'empty'))
+        };
     }
 
     componentDidMount() {
@@ -16,9 +18,15 @@ class Tetromino extends Component {
     render() {
         return (
             <div className="tetromino_area">
-                <div className="score_title">Score</div>
-                <div className="score_serction">
-                    <div className="score">999</div>
+                <div className="next_title">Next</div>
+                <div>
+                    {this.state.tetrominoTable.map((tetrominoRow) => (
+                        <div>
+                            {tetrominoRow.map((tetromino) => (
+                                <div className="empty"></div>
+                            ))}
+                        </div>
+                    ))}
                 </div>
             </div>
         );

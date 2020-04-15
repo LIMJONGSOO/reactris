@@ -3,6 +3,7 @@ import './Board.css';
 import Title from '../Title/Title';
 import Tetris from '../Tetris/Tetris';
 import Score from '../Score/Score';
+import Tetromino from '../Tetromino/Tetromino';
 
 class Board extends Component {
     constructor(props) {
@@ -23,6 +24,7 @@ class Board extends Component {
                     <Title />
                     <Tetris />
                     <Score />
+                    <Tetromino />
                 </div>
             </div>
         );

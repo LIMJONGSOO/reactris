@@ -1,0 +1,53 @@
+.tetromino_area {
+    position: absolute;
+    width: 60px;
+    height: 108px;
+    left: 248px;
+    top: 158px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.next_title {
+    position: absolute;
+    left: 28.33%;
+    right: 30%;
+    top: 2.78%;
+    bottom: 84.26%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #000000;
+}
+
+.tetromino_area > div:last-child {
+    margin-top: 22px;
+}
+
+.tetromino_area > div > div {
+    width: 39px;
+    margin: auto;
+}
+
+.empty {
+    float: left;
+    width: 19px;
+    height: 19px;
+    background: #C4C4C4;
+    margin-right:1px;
+    margin-bottom: 1px;
+}
+
+.empty:last-child {
+    float: left;
+    width: 19px;
+    height: 19px;
+    background: #C4C4C4;
+    margin-right:0px;
+    margin-bottom: 1px;
+}
