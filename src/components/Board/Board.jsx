@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './Board.css';
 import Title from '../Title/Title';
 import Tetris from '../Tetris/Tetris';
+import Score from '../Score/Score';
 
 class Board extends Component {
     constructor(props) {
@@ -21,6 +22,7 @@ class Board extends Component {
                 <div className="boardarea">
                     <Title />
                     <Tetris />
+                    <Score />
                 </div>
             </div>
         );

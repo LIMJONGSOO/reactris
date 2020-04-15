@@ -16,7 +16,6 @@ class Tetris extends Component {
     }
 
     render() {
-        console.log(this.state.testrisTable);
         return (
             <div className="tetris-area">
                 <div>

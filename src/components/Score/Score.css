@@ -1,0 +1,49 @@
+.score-area {
+    position: absolute;
+    width: 60px;
+    height: 73px;
+    left: 248px;
+    top: 69px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.score-title {
+    position: absolute;
+    left: 23.33%;
+    right: 25%;
+    top: 19.18%;
+    bottom: 61.64%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+}
+
+.score-serction {
+    position: absolute;
+    left: 3.33%;
+    right: 5%;
+    top: 52.05%;
+    bottom: 10.96%;
+    background: #C4C4C4;
+    border-radius: 10px;
+}
+
+.score {
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    bottom: 90.17%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #000000;
+}
