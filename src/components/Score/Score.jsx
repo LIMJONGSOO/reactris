@@ -15,9 +15,9 @@ class Score extends Component {
 
     render() {
         return (
-            <div className="score-area">
-                <div className="score-title">Score</div>
-                <div className="score-serction">
+            <div className="score_area">
+                <div className="score_title">Score</div>
+                <div className="score_serction">
                     <div className="score">999</div>
                 </div>
             </div>

@@ -15,7 +15,7 @@ class Title extends Component {
 
     render() {
         return (
-            <div className="maintitle">
+            <div className="main_title">
                 <div className="title">ReacTris</div>
                 <div className="logo">
                     <svg width="196" height="43" viewBox="0 0 196 43" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -17,7 +17,7 @@ class Tetris extends Component {
 
     render() {
         return (
-            <div className="tetris-area">
+            <div className="tetris_area">
                 <div>
                     {this.state.testrisTable.map((tetrisRow) => (
                         <div>

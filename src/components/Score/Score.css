@@ -1,4 +1,4 @@
-.score-area {
+.score_area {
     position: absolute;
     width: 60px;
     height: 73px;
@@ -8,7 +8,7 @@
     border-radius: 10px;
 }
 
-.score-title {
+.score_title {
     position: absolute;
     left: 23.33%;
     right: 25%;
@@ -23,7 +23,7 @@
     color: #000000;
 }
 
-.score-serction {
+.score_serction {
     position: absolute;
     left: 3.33%;
     right: 5%;

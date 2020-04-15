@@ -1,4 +1,4 @@
-.tetris-area {
+.tetris_area {
     position: absolute;
     width: 220px;
     height: 420px;
@@ -8,11 +8,11 @@
     border-radius: 18px;
 }
 
-.tetris-area > div {
+.tetris_area > div {
     margin-top: 10px;
 }
 
-.tetris-area > div > div {
+.tetris_area > div > div {
     width: 199px;
     margin: auto;
 }
