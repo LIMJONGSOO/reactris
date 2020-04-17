@@ -18,7 +18,7 @@ class Score extends Component {
             <div className="score_area">
                 <div className="score_title">Score</div>
                 <div className="score_serction">
-                    <div className="score">999</div>
+                    <div className="score">{this.props.score}</div>
                 </div>
             </div>
         );

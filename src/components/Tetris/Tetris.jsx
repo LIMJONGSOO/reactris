@@ -22,7 +22,9 @@ class Tetris extends Component {
                     {this.state.testrisTable.map((tetrisRow) => (
                         <div>
                             {tetrisRow.map((tetris) => (
-                                <div className="empty"></div>
+                                <>
+                                    <div className="empty"></div>
+                                </>
                             ))}
                         </div>
                     ))}

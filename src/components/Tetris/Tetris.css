@@ -34,3 +34,31 @@
     margin-right:0px;
     margin-bottom: 1px;
 }
+
+.tetromino1 {
+    background: #FF0000;
+}
+
+.tetromino2 {
+    background: #00CFEB;
+}
+
+.tetromino3 {
+    background: #FF9900;
+}
+
+.tetromino4 {
+    background: #00B533;
+}
+
+.tetromino5 {
+    background: #FFF393;
+}
+
+.tetromino6 {
+    background: #4200FF;
+}
+
+.tetromino7 {
+    background: #8000FF;
+}
