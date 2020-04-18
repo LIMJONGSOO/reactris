@@ -14,13 +14,15 @@ class Board extends Component {
             nextTatrominoTable: Array.from(Array(4), () => Array.from(Array(2), () => 'empty')),
             testrisTable: Array.from(Array(20), () => Array.from(Array(10), () => 'empty')),
             tetrominoList:[
-                Array.from(Array(4), () => Array.from(Array(2), () => 'tetromino1')),
-                Array.from(Array(4), () => Array.from(Array(2), () => 'tetromino2')),
-                Array.from(Array(4), () => Array.from(Array(2), () => 'tetromino3')),
-                Array.from(Array(4), () => Array.from(Array(2), () => 'tetromino4')),
-                Array.from(Array(4), () => Array.from(Array(2), () => 'tetromino5')),
-                Array.from(Array(4), () => Array.from(Array(2), () => 'tetromino6')),
-                Array.from(Array(4), () => Array.from(Array(2), () => 'tetromino7'))
+                Array.from(Array(4), (x, xIdx) => Array.from(Array(2), (y, yIdx) => {
+                    return (xIdx === 0 && yIdx === 0) || (xIdx === 0 && yIdx === 1) 
+                        || (xIdx === 0 && yIdx === 2) || (xIdx === 0 && yIdx === 3) ? 'empty' : 'tetromino1'})),
+                Array.from(Array(4), () => Array.from(Array(2), (value, index) => 'tetromino2')),
+                Array.from(Array(4), () => Array.from(Array(2), (value, index) => 'tetromino3')),
+                Array.from(Array(4), () => Array.from(Array(2), (value, index) => 'tetromino4')),
+                Array.from(Array(4), () => Array.from(Array(2), (value, index) => 'tetromino5')),
+                Array.from(Array(4), () => Array.from(Array(2), (value, index) => 'tetromino6')),
+                Array.from(Array(4), () => Array.from(Array(2), (value, index) => 'tetromino7'))
             ],
             score: 0
         };
