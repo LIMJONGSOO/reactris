@@ -14,16 +14,26 @@ class Board extends Component {
             nextTatrominoTable: Array.from(Array(4), () => Array.from(Array(2), () => 'empty')),
             testrisTable: Array.from(Array(20), () => Array.from(Array(10), () => 'empty')),
             tetrominoList:[
-                {type:'tetromino1', location:[{x:0, y:0},{x:0, y:1},{x:0, y:2},{x:0, y:3}]},
-                {type:'tetromino2', location:[{x:0, y:0},{x:0, y:1},{x:0, y:2},{x:1, y:0}]},
-                {type:'tetromino3', location:[{x:0, y:0},{x:0, y:1},{x:1, y:0},{x:1, y:1}]},
-                {type:'tetromino4', location:[{x:0, y:0},{x:1, y:0},{x:1, y:1},{x:1, y:2}]},
-                {type:'tetromino5', location:[{x:0, y:0},{x:0, y:1},{x:1, y:1},{x:1, y:2}]},
-                {type:'tetromino6', location:[{x:0, y:1},{x:0, y:2},{x:1, y:0},{x:1, y:1}]},
-                {type:'tetromino7', location:[{x:0, y:1},{x:1, y:0},{x:1, y:1},{x:1, y:2}]}
+                Array.from(Array(4), () => Array.from(Array(2), () => 'tetromino1')),
+                Array.from(Array(4), () => Array.from(Array(2), () => 'tetromino2')),
+                Array.from(Array(4), () => Array.from(Array(2), () => 'tetromino3')),
+                Array.from(Array(4), () => Array.from(Array(2), () => 'tetromino4')),
+                Array.from(Array(4), () => Array.from(Array(2), () => 'tetromino5')),
+                Array.from(Array(4), () => Array.from(Array(2), () => 'tetromino6')),
+                Array.from(Array(4), () => Array.from(Array(2), () => 'tetromino7'))
             ],
             score: 0
         };
+
+        /*
+            {type:'tetromino1', location:[{x:0, y:0},{x:0, y:1},{x:0, y:2},{x:0, y:3}]},
+            {type:'tetromino2', location:[{x:0, y:0},{x:0, y:1},{x:0, y:2},{x:1, y:0}]},
+            {type:'tetromino3', location:[{x:0, y:0},{x:0, y:1},{x:1, y:0},{x:1, y:1}]},
+            {type:'tetromino4', location:[{x:0, y:0},{x:1, y:0},{x:1, y:1},{x:1, y:2}]},
+            {type:'tetromino5', location:[{x:0, y:0},{x:0, y:1},{x:1, y:1},{x:1, y:2}]},
+            {type:'tetromino6', location:[{x:0, y:1},{x:0, y:2},{x:1, y:0},{x:1, y:1}]},
+            {type:'tetromino7', location:[{x:0, y:1},{x:1, y:0},{x:1, y:1},{x:1, y:2}]}
+        */
     }
 
     componentDidMount() {
