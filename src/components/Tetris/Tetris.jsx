@@ -5,7 +5,6 @@ class Tetris extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            testrisTable: Array.from(Array(20), () => Array.from(Array(10), () => 'empty'))
         };
     }
 
@@ -19,11 +18,11 @@ class Tetris extends Component {
         return (
             <div className="tetris_area">
                 <div>
-                    {this.state.testrisTable.map((tetrisRow) => (
+                    {this.props.testrisTable.map((tetrisRow, rowIdx) => (
                         <div>
-                            {tetrisRow.map((tetris) => (
+                            {tetrisRow.map((tetris, colIdx) => (
                                 <>
-                                    <div className="empty"></div>
+                                    <div className={this.props.nowTetromino.location && this.props.nowTetromino.location.map((location) => location[0]+'-'+location[1]).includes(rowIdx+'-'+colIdx) ? this.props.nowTetromino.type : tetris }></div>
                                 </>
                             ))}
                         </div>

@@ -10,6 +10,7 @@ class Tetromino extends Component {
     }
 
     componentDidMount() {
+        console.log(this.props.nextTetromino);
     }
 
     componentWillUnmount() {
@@ -20,10 +21,10 @@ class Tetromino extends Component {
             <div className="tetromino_area">
                 <div className="next_title">Next</div>
                 <div>
-                    {this.state.tetrominoTable.map((tetrominoRow) => (
+                    {this.state.tetrominoTable.map((tetrominoRow, rowIdx) => (
                         <div>
-                            {tetrominoRow.map((tetromino) => (
-                                <div className="empty"></div>
+                            {tetrominoRow.map((tetromino, colIdx) => (
+                                <div className={this.props.nextTetromino.location && this.props.nextTetromino.location.map((location) => location[0]+'-'+location[1]).includes(rowIdx+'-'+colIdx) ? this.props.nextTetromino.type : tetromino }></div>
                             ))}
                         </div>
                     ))}

@@ -34,20 +34,50 @@
     margin: auto;
 }
 
-.empty {
+.tetromino_area > div > div > div {
     float: left;
     width: 19px;
     height: 19px;
-    background: #C4C4C4;
     margin-right:1px;
     margin-bottom: 1px;
 }
 
-.empty:last-child {
+.tetromino_area > div > div > div:last-child {
     float: left;
     width: 19px;
     height: 19px;
-    background: #C4C4C4;
     margin-right:0px;
     margin-bottom: 1px;
+}
+
+.empty {
+    background: #C4C4C4;
+}
+
+.tetromino1 {
+    background: #FF0000;
+}
+
+.tetromino2 {
+    background: #FF9900;
+}
+
+.tetromino3 {
+    background: #FFF393;
+}
+
+.tetromino4 {
+    background: #00B533;
+}
+
+.tetromino5 {
+    background: #4200FF;
+}
+
+.tetromino6 {
+    background: #8000FF;
+}
+
+.tetromino7 {
+    background: #00CFEB;
 }
