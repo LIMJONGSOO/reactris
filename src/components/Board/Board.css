@@ -6,8 +6,6 @@
 }
 
 .boardarea {
-    position: absolute;
-    width: 320px;
     height: 600px;
     left: 20px;
     top: 25px;
