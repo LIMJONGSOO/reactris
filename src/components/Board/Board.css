@@ -12,3 +12,17 @@
     background: #F7DF1E;
     border-radius: 26px;
 }
+
+.middle_area {
+    height:430px;
+}
+
+.left_area {
+    float: left;
+    width: 65%;
+}
+
+.right_area {
+    float: left;
+    width: 30%;
+}

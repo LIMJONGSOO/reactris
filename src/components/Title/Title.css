@@ -1,18 +1,8 @@
 .main_title {
-    position: absolute;
-    left: 19.38%;
-    right: 19.38%;
-    top: 1.17%;
-    bottom: 89.83%;
+    text-align: center;
 }
 
 .title {
-    position: absolute;
-    left: 30.1%;
-    right: 29.08%;
-    top: 0%;
-    bottom: 57.41%;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -20,11 +10,4 @@
     line-height: 23px;
 
     color: #000000;
-}
-
-.logo {
-    position: absolute;
-    right: 0%;
-    top: 20.37%;
-    bottom: 0%;
 }

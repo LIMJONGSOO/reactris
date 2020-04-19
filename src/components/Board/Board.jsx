@@ -136,9 +136,15 @@ class Board extends Component {
             <div className="board">
                 <div className="boardarea">
                     <Title />
-                    <Tetris testrisTable={this.state.testrisTable} nowTetromino={this.state.nowTetromino}/>
-                    <Score score={this.state.score}/>
-                    <Tetromino nextTetromino={this.state.nextTetromino}/>
+                    <div className="middle_area">
+                        <div className="left_area">
+                            <Tetris testrisTable={this.state.testrisTable} nowTetromino={this.state.nowTetromino}/>
+                        </div>
+                        <div  className="right_area">
+                            <Score score={this.state.score}/>
+                            <Tetromino nextTetromino={this.state.nextTetromino}/>
+                        </div>
+                    </div>
                     <Operator 
                         moveRight={this.moveRight} 
                         moveLeft={this.moveLeft} 

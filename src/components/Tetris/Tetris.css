@@ -1,15 +1,13 @@
 .tetris_area {
-    position: absolute;
     width: 220px;
     height: 420px;
-    left: 15px;
-    top: 69px;
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
     border-radius: 18px;
+    margin: 10px 10px 0 10px;
 }
 
-.tetris_area > div {
-    margin-top: 10px;
+.tetris_area > div:first-child {
+    padding-top: 10px;
 }
 
 .tetris_area > div > div {

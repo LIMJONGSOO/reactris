@@ -1,39 +1,39 @@
 .operator_area {
-    position: absolute;
-    width: 265px;
     height: 65px;
-    left: 22px;
-    top: 501px;
+}
+
+.space_button {
+    margin: 15px;
+    float:left;
+    width:30%;
+}
+
+.operator_right_area {
+    margin: 15px 0;
+    float:left;
+    width:60%;
+}
+
+.operator_down_area {
+    float:left;
 }
 
 .left_button {
-    position: absolute;
-    left: 39.62%;
-    right: 41.51%;
-    top: 53.85%;
-    bottom: 0%;
+    float: left;
+    width:58px;
 }
 
 .down_button {
-    position: absolute;
-    left: 60.38%;
-    right: 20.75%;
-    top: 53.85%;
-    bottom: 0%;
+    float: left;
+    width:58px;
 }
 
 .right_button {
-    position: absolute;
-    left: 81.13%;
-    right: 0%;
-    top: 53.85%;
-    bottom: 0%;
+    float: left;
+    width:58px;
 }
 
 .up_button {
-    position: absolute;
-    left: 60.38%;
-    right: 20.75%;
-    top: 0%;
-    bottom: 53.85%;
+    float: left;
+    margin-left:58px;
 }

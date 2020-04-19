@@ -5,7 +5,7 @@ class Tetromino extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            tetrominoTable: Array.from(Array(4), () => Array.from(Array(2), () => 'empty'))
+            tetrominoTable: Array.from(Array(2), () => Array.from(Array(4), () => 'empty'))
         };
     }
 

@@ -16,7 +16,7 @@ class Operator extends Component {
     render() {
         return (
             <div className="operator_area">
-                <div onClick={this.props.moveToBottom}>
+                <div className="space_button" onClick={this.props.moveToBottom}>
                     <svg width="73" height="73" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d)">
                         <circle cx="36.5" cy="32.5" r="32.5" fill="#C4C4C4"/>
@@ -35,85 +35,89 @@ class Operator extends Component {
                         </defs>
                     </svg>
                 </div>
-                <div className="left_button" onClick={this.props.moveLeft}>
-                    <svg width="58" height="38" viewBox="0 0 58 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_d)">
-                        <rect x="4" width="50" height="30" fill="#C4C4C4"/>
-                        </g>
-                        <line x1="21.6464" y1="15.7175" x2="28.7175" y2="8.64642" stroke="black"/>
-                        <line x1="28.7175" y1="22.4246" x2="21.6464" y2="15.3535" stroke="black"/>
-                        <defs>
-                        <filter id="filter0_d" x="0" y="0" width="58" height="38" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-                        <feOffset dy="4"/>
-                        <feGaussianBlur stdDeviation="2"/>
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-                        </filter>
-                        </defs>
-                    </svg>
-                </div>
-                <div className="down_button" onClick={this.props.moveDown}>
-                    <svg width="58" height="38" viewBox="0 0 58 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_d)">
-                        <rect x="4" width="50" height="30" fill="#C4C4C4"/>
-                        </g>
-                        <line x1="28.6464" y1="21.7175" x2="35.7175" y2="14.6464" stroke="black"/>
-                        <line x1="28.7175" y1="22.4246" x2="21.6464" y2="15.3535" stroke="black"/>
-                        <defs>
-                        <filter id="filter0_d" x="0" y="0" width="58" height="38" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-                        <feOffset dy="4"/>
-                        <feGaussianBlur stdDeviation="2"/>
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-                        </filter>
-                        </defs>
-                    </svg>
-                </div>
-                <div className="right_button" onClick={this.props.moveRight}>
-                    <svg width="58" height="38" viewBox="0 0 58 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_d)">
-                        <rect x="4" width="50" height="30" fill="#C4C4C4"/>
-                        </g>
-                        <line x1="28.6464" y1="21.7175" x2="35.7175" y2="14.6464" stroke="black"/>
-                        <line x1="35.7175" y1="15.4246" x2="28.6465" y2="8.35353" stroke="black"/>
-                        <defs>
-                        <filter id="filter0_d" x="0" y="0" width="58" height="38" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-                        <feOffset dy="4"/>
-                        <feGaussianBlur stdDeviation="2"/>
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-                        </filter>
-                        </defs>
-                    </svg>
-                </div>
-                <div className="up_button">
-                    <svg width="58" height="38" viewBox="0 0 58 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_d)">
-                        <rect x="4" width="50" height="30" fill="#C4C4C4"/>
-                        </g>
-                        <line x1="21.6464" y1="14.7175" x2="28.7175" y2="7.64642" stroke="black"/>
-                        <line x1="35.7175" y1="15.4246" x2="28.6464" y2="8.35353" stroke="black"/>
-                        <defs>
-                        <filter id="filter0_d" x="0" y="0" width="58" height="38" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-                        <feOffset dy="4"/>
-                        <feGaussianBlur stdDeviation="2"/>
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-                        </filter>
-                        </defs>
-                    </svg>
+                <div className="operator_right_area">
+                    <div className="up_button">
+                        <svg width="58" height="38" viewBox="0 0 58 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d)">
+                            <rect x="4" width="50" height="30" fill="#C4C4C4"/>
+                            </g>
+                            <line x1="21.6464" y1="14.7175" x2="28.7175" y2="7.64642" stroke="black"/>
+                            <line x1="35.7175" y1="15.4246" x2="28.6464" y2="8.35353" stroke="black"/>
+                            <defs>
+                            <filter id="filter0_d" x="0" y="0" width="58" height="38" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                            <feOffset dy="4"/>
+                            <feGaussianBlur stdDeviation="2"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                            </filter>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div className="operator_down_area">
+                        <div className="left_button" onClick={this.props.moveLeft}>
+                            <svg width="58" height="38" viewBox="0 0 58 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_d)">
+                                <rect x="4" width="50" height="30" fill="#C4C4C4"/>
+                                </g>
+                                <line x1="21.6464" y1="15.7175" x2="28.7175" y2="8.64642" stroke="black"/>
+                                <line x1="28.7175" y1="22.4246" x2="21.6464" y2="15.3535" stroke="black"/>
+                                <defs>
+                                <filter id="filter0_d" x="0" y="0" width="58" height="38" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                                <feOffset dy="4"/>
+                                <feGaussianBlur stdDeviation="2"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div className="down_button" onClick={this.props.moveDown}>
+                            <svg width="58" height="38" viewBox="0 0 58 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_d)">
+                                <rect x="4" width="50" height="30" fill="#C4C4C4"/>
+                                </g>
+                                <line x1="28.6464" y1="21.7175" x2="35.7175" y2="14.6464" stroke="black"/>
+                                <line x1="28.7175" y1="22.4246" x2="21.6464" y2="15.3535" stroke="black"/>
+                                <defs>
+                                <filter id="filter0_d" x="0" y="0" width="58" height="38" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                                <feOffset dy="4"/>
+                                <feGaussianBlur stdDeviation="2"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div className="right_button" onClick={this.props.moveRight}>
+                            <svg width="58" height="38" viewBox="0 0 58 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_d)">
+                                <rect x="4" width="50" height="30" fill="#C4C4C4"/>
+                                </g>
+                                <line x1="28.6464" y1="21.7175" x2="35.7175" y2="14.6464" stroke="black"/>
+                                <line x1="35.7175" y1="15.4246" x2="28.6465" y2="8.35353" stroke="black"/>
+                                <defs>
+                                <filter id="filter0_d" x="0" y="0" width="58" height="38" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                                <feOffset dy="4"/>
+                                <feGaussianBlur stdDeviation="2"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
         );

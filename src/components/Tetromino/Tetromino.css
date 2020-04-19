@@ -1,26 +1,19 @@
 .tetromino_area {
-    position: absolute;
-    width: 60px;
     height: 108px;
-    left: 248px;
-    top: 158px;
-
     background: #FFFFFF;
     border-radius: 10px;
+    margin: 10px 10px 0 10px;
+    text-align: center;
 }
 
 .next_title {
-    position: absolute;
-    left: 28.33%;
-    right: 30%;
-    top: 2.78%;
-    bottom: 84.26%;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 14px;
+    margin-top: 50px;
+    padding-top: 10px;
 
     color: #000000;
 }
@@ -30,7 +23,7 @@
 }
 
 .tetromino_area > div > div {
-    width: 39px;
+    width: 79px;
     margin: auto;
 }
 
