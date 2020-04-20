@@ -20,10 +20,7 @@ class Board extends Component {
     constructor(props) {
         super(props);
 
-        const newTetromino = Object.assign({},tetrominoList[~~(Math.random()*7)]);
-        newTetromino.locationList = newTetromino.locationList.map((location) => location.map((point) => [point[0] - 2, point[1] + 3]));
-        const nextTetromino = Object.assign({},tetrominoList[~~(Math.random()*7)]);
-        nextTetromino.locationList = nextTetromino.locationList.map((location) => location.map((point) => [point[0], point[1]]));
+        const [newTetromino, nextTetromino] = this.changeTetromino();
 
         this.state = {
             rowCnt: 20,
@@ -47,23 +44,29 @@ class Board extends Component {
     moveTetromino(y, x) {
         const moveTetromino = Object.assign({},this.state.nowTetromino);
         moveTetromino.locationList = moveTetromino.locationList.map((location) => location.map((point) => [point[0] + y, point[1] + x]));
-        this.setState({nowTetromino: moveTetromino});
+        return moveTetromino;
+    }
+
+    changeTetromino() {
+        const newTetromino = Object.assign({},tetrominoList[~~(Math.random()*7)]);
+        newTetromino.locationList = newTetromino.locationList.map((location) => location.map((point) => [point[0] - 2, point[1] + 3]));
+        const nextTetromino = Object.assign({},tetrominoList[~~(Math.random()*7)]);
+        nextTetromino.locationList = nextTetromino.locationList.map((location) => location.map((point) => [point[0], point[1]]));
+        
+        return [newTetromino, nextTetromino];
     }
 
     downTetromino() {
         setTimeout(() => {
             if(!this.checkTouchBottom()) {
-                this.moveTetromino(1, 0); // 아래로 한칸 이동
+                this.setState({nowTetromino: this.moveTetromino(1, 0)}); // 아래로 한칸 이동
             } else {
                 if(!this.checkTouchTop()) {
                     const testrisTable = this.state.testrisTable;
                     this.state.nowTetromino.locationList[this.state.nowTetromino.rotationIdx].forEach((point) => {
                         testrisTable[point[0]][point[1]] = this.state.nowTetromino.type;
                     });
-                    const newTetromino = this.state.nextTetromino;
-                    newTetromino.locationList = newTetromino.locationList.map((location) => location.map((point) => [point[0] - 2, point[1] + 3]));
-                    const nextTetromino = Object.assign({},tetrominoList[~~(Math.random()*7)]);
-                    nextTetromino.locationList = nextTetromino.locationList.map((location) => location.map((point) => [point[0], point[1]]));
+                    const [newTetromino, nextTetromino] = this.changeTetromino();
                     this.setState({nowTetromino: newTetromino, nextTetromino: nextTetromino, testrisTable: testrisTable});
                 } else {
 
@@ -98,19 +101,19 @@ class Board extends Component {
 
     moveRight = () => {
         if (!this.checkTouchRight()) {
-            this.moveTetromino(0, 1);
+            this.setState({nowTetromino: this.moveTetromino(0, 1)});
         }
     }
 
     moveLeft = () => {
         if (!this.checkTouchLeft()) {
-            this.moveTetromino(0, -1);
+            this.setState({nowTetromino: this.moveTetromino(0, -1)});
         }
     }
 
     moveDown = () => {
         if(!this.checkTouchBottom()) {
-            this.moveTetromino(1, 0);
+            this.setState({nowTetromino: this.moveTetromino(1, 0)});
         }
     }
 
@@ -125,7 +128,15 @@ class Board extends Component {
                     moveCnt++;
                     targetTetromino.locationList = targetTetromino.locationList.map((location) => location.map((point) => [point[0] + 1, point[1]]));
             }
-            this.moveTetromino(moveCnt, 0);
+            const moveTetromino = this.moveTetromino(moveCnt, 0);
+            const testrisTable = this.state.testrisTable;
+            moveTetromino.locationList[moveTetromino.rotationIdx].forEach((point) => {
+                if(point[0] >= 0) {
+                    testrisTable[point[0]][point[1]] = moveTetromino.type;
+                }
+            });
+            const [newTetromino, nextTetromino] = this.changeTetromino();
+            this.setState({nowTetromino: newTetromino, nextTetromino: nextTetromino, testrisTable: testrisTable});
         }
     }
 
