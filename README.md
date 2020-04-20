@@ -1,12 +1,21 @@
 
-# reactris
+# reactris 
 
 # Tetris Toy Project of limjs
 
+# develop complete 
+# version 1.0
 
 목표
 - React의 Virtual DOM Rendering & Component 구조 이해
 - figma로 기획 및 퍼블리싱 경험
+
+0. 개발완료
+
+    - React Rendering & LifeCycle & Component 구조 이해
+    - 전과정 작업(figma를 이용해서 기획부터 퍼블리싱 작업 개발 테스트) 
+    - figma를 바탕으로 css 개발 및 적용
+
 
 1. 프로젝트 설명
 
@@ -97,7 +106,7 @@
    - [설계 및 퍼블리싱](https://www.figma.com/file/yoOCik1e4GCMHbwmjjotMC/Tetris-Toy-Project-of--limjs?node-id=0%3A1)
    - [repository](https://github.com/LIMJONGSOO/Tetris.git)
 
-   
-
+5. 버전업 필요사항
+    - 점수에 따른 Tetromino 내려오는 속도 증가 로직
    
 
