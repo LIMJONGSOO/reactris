@@ -15,7 +15,7 @@ class Tetris extends Component {
     }
 
     render() {
-        const nowTetromino = this.props.nowTetromino.locations[this.props.nowTetromino.rotationIdx];
+        const nowTetromino = this.props.nowTetromino.locationList[this.props.nowTetromino.rotationIdx];
         return (
             <div className="tetris_area">
                 <div>

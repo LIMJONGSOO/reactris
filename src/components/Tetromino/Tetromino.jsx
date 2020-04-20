@@ -17,7 +17,7 @@ class Tetromino extends Component {
     }
 
     render() {
-        const nextTetromino = this.props.nextTetromino.locations[this.props.nextTetromino.rotationIdx];
+        const nextTetromino = this.props.nextTetromino.locationList[this.props.nextTetromino.rotationIdx];
         return (
             <div className="tetromino_area">
                 <div className="next_title">Next</div>
