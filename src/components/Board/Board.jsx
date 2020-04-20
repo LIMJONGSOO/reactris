@@ -45,7 +45,7 @@ class Board extends Component {
     }
 
     moveTetromino(y, x) {
-        const moveTetromino = this.state.nowTetromino;
+        const moveTetromino = Object.assign({},this.state.nowTetromino);
         moveTetromino.locationList = moveTetromino.locationList.map((location) => location.map((point) => [point[0] + y, point[1] + x]));
         this.setState({nowTetromino: moveTetromino});
     }
@@ -75,24 +75,24 @@ class Board extends Component {
 
     checkTouchBottom() {
         return this.state.nowTetromino.locationList[this.state.nowTetromino.rotationIdx]
-                .filter((location) => location[0] + 1 >= 0 && (location[0] + 1 === this.state.rowCnt || this.state.testrisTable[location[0] + 1][location[1]] !== 'empty'))
+                .filter((point) => point[0] + 1 >= 0 && (point[0] + 1 === this.state.rowCnt || this.state.testrisTable[point[0] + 1][point[1]] !== 'empty'))
                 .length > 0 ?  true : false;
     }
 
     checkTouchTop() {
         return this.state.nowTetromino.locationList[this.state.nowTetromino.rotationIdx]
-            .filter((location) => location[0] < 0 ).length > 0 ? true : false;
+                .filter((point) => point[0] < 0 ).length > 0 ? true : false;
     }
 
     checkTouchRight() {
         return this.state.nowTetromino.locationList[this.state.nowTetromino.rotationIdx]
-                .filter((location) => location[0] >= 0 && location[1] + 1 >= this.state.colCnt && (location[1] + 1 === this.state.colCnt || this.state.testrisTable[location[0]][location[1] + 1] !== 'empty'))
+                .filter((point) => point[0] >= 0 && point[1] + 1 >= this.state.colCnt && (point[1] + 1 === this.state.colCnt || this.state.testrisTable[point[0]][point[1] + 1] !== 'empty'))
                 .length > 0 ?  true : false;
     }
 
     checkTouchLeft() {
         return this.state.nowTetromino.locationList[this.state.nowTetromino.rotationIdx]
-                .filter((location) => location[0] >= 0 && (location[1] === 0 || this.state.testrisTable[location[0]][location[1] - 1] !== 'empty'))
+                .filter((point) => point[0] >= 0 && (point[1] === 0 || this.state.testrisTable[point[0]][point[1] - 1] !== 'empty'))
                 .length > 0 ?  true : false;
     }
 
@@ -120,8 +120,8 @@ class Board extends Component {
             const targetTetromino = Object.assign({},this.state.nowTetromino);
 
             while(targetTetromino.locationList[targetTetromino.rotationIdx]
-                .filter((location) => location[0] + 1 >= 0 && (location[0] + 1 === this.state.rowCnt || this.state.testrisTable[location[0] + 1][location[1]] !== 'empty'))
-                .length === 0) {
+                    .filter((point) => point[0] + 1 >= 0 && (point[0] + 1 === this.state.rowCnt || this.state.testrisTable[point[0] + 1][point[1]] !== 'empty'))
+                    .length === 0) {
                     moveCnt++;
                     targetTetromino.locationList = targetTetromino.locationList.map((location) => location.map((point) => [point[0] + 1, point[1]]));
             }
@@ -130,7 +130,14 @@ class Board extends Component {
     }
 
     rotationTetromino = () => {
+        const rotateTetromino = Object.assign({},this.state.nowTetromino);
+        rotateTetromino.rotationIdx = (rotateTetromino.rotationIdx + 1) % rotateTetromino.locationList.length;
         
+        if (rotateTetromino.locationList[rotateTetromino.rotationIdx]
+            .filter((point) => point[0] >= 20 ||point[1] < 0 || point[1] >= 10 || (point[0] >= 0 && this.state.testrisTable[point[0]][point[1]] !== 'empty'))
+            .length === 0) {
+                this.setState({nowTetromino: rotateTetromino});
+        }
     }
 
     handleKeyPress = (event) => {
