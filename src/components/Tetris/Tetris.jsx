@@ -15,6 +15,7 @@ class Tetris extends Component {
     }
 
     render() {
+        const nowTetromino = this.props.nowTetromino.locations[this.props.nowTetromino.rotationIdx];
         return (
             <div className="tetris_area">
                 <div>
@@ -22,7 +23,7 @@ class Tetris extends Component {
                         <div>
                             {tetrisRow.map((tetris, colIdx) => (
                                 <>
-                                    <div className={this.props.nowTetromino.location && this.props.nowTetromino.location.map((location) => location[0]+'-'+location[1]).includes(rowIdx+'-'+colIdx) ? this.props.nowTetromino.type : tetris }></div>
+                                    <div className={nowTetromino && nowTetromino.map((location) => location[0]+'-'+location[1]).includes(rowIdx+'-'+colIdx) ? this.props.nowTetromino.type : tetris }></div>
                                 </>
                             ))}
                         </div>

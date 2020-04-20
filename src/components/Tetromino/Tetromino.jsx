@@ -17,6 +17,7 @@ class Tetromino extends Component {
     }
 
     render() {
+        const nextTetromino = this.props.nextTetromino.locations[this.props.nextTetromino.rotationIdx];
         return (
             <div className="tetromino_area">
                 <div className="next_title">Next</div>
@@ -24,7 +25,7 @@ class Tetromino extends Component {
                     {this.state.tetrominoTable.map((tetrominoRow, rowIdx) => (
                         <div>
                             {tetrominoRow.map((tetromino, colIdx) => (
-                                <div className={this.props.nextTetromino.location && this.props.nextTetromino.location.map((location) => location[0]+'-'+location[1]).includes(rowIdx+'-'+colIdx) ? this.props.nextTetromino.type : tetromino }></div>
+                                <div className={nextTetromino && nextTetromino.map((location) => location[0]+'-'+location[1]).includes(rowIdx+'-'+colIdx) ? this.props.nextTetromino.type : tetromino }></div>
                             ))}
                         </div>
                     ))}
