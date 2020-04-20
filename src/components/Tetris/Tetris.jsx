@@ -20,11 +20,9 @@ class Tetris extends Component {
             <div className="tetris_area">
                 <div>
                     {this.props.testrisTable.map((tetrisRow, rowIdx) => (
-                        <div>
+                        <div key={rowIdx}>
                             {tetrisRow.map((tetris, colIdx) => (
-                                <>
-                                    <div className={nowTetromino && nowTetromino.map((location) => location[0]+'-'+location[1]).includes(rowIdx+'-'+colIdx) ? this.props.nowTetromino.type : tetris }></div>
-                                </>
+                                <div key={colIdx} className={nowTetromino && nowTetromino.map((location) => location[0]+'-'+location[1]).includes(rowIdx+'-'+colIdx) ? this.props.nowTetromino.type : tetris }></div>
                             ))}
                         </div>
                     ))}

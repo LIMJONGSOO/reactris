@@ -23,9 +23,9 @@ class Tetromino extends Component {
                 <div className="next_title">Next</div>
                 <div>
                     {this.state.tetrominoTable.map((tetrominoRow, rowIdx) => (
-                        <div>
+                        <div key={rowIdx}>
                             {tetrominoRow.map((tetromino, colIdx) => (
-                                <div className={nextTetromino && nextTetromino.map((location) => location[0]+'-'+location[1]).includes(rowIdx+'-'+colIdx) ? this.props.nextTetromino.type : tetromino }></div>
+                                <div key={colIdx} className={nextTetromino && nextTetromino.map((location) => location[0]+'-'+location[1]).includes(rowIdx+'-'+colIdx) ? this.props.nextTetromino.type : tetromino }></div>
                             ))}
                         </div>
                     ))}
