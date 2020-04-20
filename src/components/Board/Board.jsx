@@ -136,14 +136,19 @@ class Board extends Component {
     handleKeyPress = (event) => {
         if (event.keyCode === 37) {
             this.moveLeft();
+            event.preventDefault();
         } else if (event.keyCode === 38) {
             this.rotationTetromino();
+            event.preventDefault();
         } else if (event.keyCode === 39) {
             this.moveRight();
+            event.preventDefault();
         } else if (event.keyCode === 40) {
             this.moveDown();
+            event.preventDefault();
         } else if (event.keyCode === 32) {
             this.moveToBottom();
+            event.preventDefault();
         }
     }
 
