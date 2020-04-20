@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "//limjongsoo.github.io/reactris/static/css/main.cf4426c7.chunk.css",
+    "main.js": "//limjongsoo.github.io/reactris/static/js/main.6026869e.chunk.js",
+    "main.js.map": "//limjongsoo.github.io/reactris/static/js/main.6026869e.chunk.js.map",
+    "runtime-main.js": "//limjongsoo.github.io/reactris/static/js/runtime-main.3ec6728b.js",
+    "runtime-main.js.map": "//limjongsoo.github.io/reactris/static/js/runtime-main.3ec6728b.js.map",
+    "static/js/2.838fb276.chunk.js": "//limjongsoo.github.io/reactris/static/js/2.838fb276.chunk.js",
+    "static/js/2.838fb276.chunk.js.map": "//limjongsoo.github.io/reactris/static/js/2.838fb276.chunk.js.map",
+    "index.html": "//limjongsoo.github.io/reactris/index.html",
+    "precache-manifest.c1e6950e7986acac6caede8768a5ccbb.js": "//limjongsoo.github.io/reactris/precache-manifest.c1e6950e7986acac6caede8768a5ccbb.js",
+    "service-worker.js": "//limjongsoo.github.io/reactris/service-worker.js",
+    "static/css/main.cf4426c7.chunk.css.map": "//limjongsoo.github.io/reactris/static/css/main.cf4426c7.chunk.css.map",
+    "static/js/2.838fb276.chunk.js.LICENSE.txt": "//limjongsoo.github.io/reactris/static/js/2.838fb276.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3ec6728b.js",
+    "static/js/2.838fb276.chunk.js",
+    "static/css/main.cf4426c7.chunk.css",
+    "static/js/main.6026869e.chunk.js"
+  ]
+}
