@@ -1,10 +1,9 @@
 
-# reactris 
+# Reactris 
 
-# Tetris Toy Project of limjs
+## Tetris Toy Project of limjs using react and figma
 
-# develop complete 
-# version 1.0
+### develop complete / version 1.0
 
 목표
 - React의 Virtual DOM Rendering & Component 구조 이해
