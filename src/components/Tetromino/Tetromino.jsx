@@ -10,7 +10,6 @@ class Tetromino extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props.nextTetromino);
     }
 
     componentWillUnmount() {
