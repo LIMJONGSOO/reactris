@@ -36,7 +36,7 @@ class Operator extends Component {
                     </svg>
                 </div>
                 <div className="operator_right_area">
-                    <div className="up_button">
+                    <div className="up_button" onClick={this.props.rotationTetromino}>
                         <svg width="58" height="38" viewBox="0 0 58 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_d)">
                             <rect x="4" width="50" height="30" fill="#C4C4C4"/>
@@ -44,8 +44,8 @@ class Operator extends Component {
                             <line x1="21.6464" y1="14.7175" x2="28.7175" y2="7.64642" stroke="black"/>
                             <line x1="35.7175" y1="15.4246" x2="28.6464" y2="8.35353" stroke="black"/>
                             <defs>
-                            <filter id="filter0_d" x="0" y="0" width="58" height="38" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <filter id="filter0_d" x="0" y="0" width="58" height="38" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
                             <feOffset dy="4"/>
                             <feGaussianBlur stdDeviation="2"/>
