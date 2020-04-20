@@ -23,12 +23,13 @@ class Board extends Component {
         const [newTetromino, nextTetromino] = this.changeTetromino();
 
         this.state = {
+            alive: true,
             rowCnt: 20,
             colCnt: 10,
             speed: 500,
             nowTetromino: newTetromino,
             nextTetromino: nextTetromino,
-            testrisTable: Array.from(Array(20), () => Array.from(Array(10), () => 'empty')),
+            tetrisTable: Array.from(Array(20), () => Array.from(Array(10), () => 'empty')),
             score: 0
         };
     }
@@ -48,7 +49,7 @@ class Board extends Component {
     }
 
     changeTetromino() {
-        const newTetromino = Object.assign({},tetrominoList[~~(Math.random()*7)]);
+        const newTetromino = this.state ? this.state.nextTetromino : Object.assign({},tetrominoList[~~(Math.random()*7)]);
         newTetromino.locationList = newTetromino.locationList.map((location) => location.map((point) => [point[0] - 2, point[1] + 3]));
         const nextTetromino = Object.assign({},tetrominoList[~~(Math.random()*7)]);
         nextTetromino.locationList = nextTetromino.locationList.map((location) => location.map((point) => [point[0], point[1]]));
@@ -62,23 +63,27 @@ class Board extends Component {
                 this.setState({nowTetromino: this.moveTetromino(1, 0)}); // 아래로 한칸 이동
             } else {
                 if(!this.checkTouchTop()) {
-                    const testrisTable = this.state.testrisTable;
+                    const tetrisTable = this.state.tetrisTable;
                     this.state.nowTetromino.locationList[this.state.nowTetromino.rotationIdx].forEach((point) => {
-                        testrisTable[point[0]][point[1]] = this.state.nowTetromino.type;
+                        tetrisTable[point[0]][point[1]] = this.state.nowTetromino.type;
                     });
+                    const [plusScore, newTetrisTable] = this.calculatePoint(tetrisTable);
                     const [newTetromino, nextTetromino] = this.changeTetromino();
-                    this.setState({nowTetromino: newTetromino, nextTetromino: nextTetromino, testrisTable: testrisTable});
+                    this.setState({nowTetromino: newTetromino, nextTetromino: nextTetromino, tetrisTable: newTetrisTable, score: this.state.score + plusScore});
                 } else {
-
+                    this.setState({alive: false});
+                    alert("Game Over! Your Score is " + this.state.score);
                 }
             }
-            this.downTetromino();
+            if(this.state.alive) {
+                this.downTetromino();
+            }
         }, this.state.speed);
     }
 
     checkTouchBottom() {
         return this.state.nowTetromino.locationList[this.state.nowTetromino.rotationIdx]
-                .filter((point) => point[0] + 1 >= 0 && (point[0] + 1 === this.state.rowCnt || this.state.testrisTable[point[0] + 1][point[1]] !== 'empty'))
+                .filter((point) => point[0] + 1 >= 0 && (point[0] + 1 === this.state.rowCnt || this.state.tetrisTable[point[0] + 1][point[1]] !== 'empty'))
                 .length > 0 ?  true : false;
     }
 
@@ -89,13 +94,13 @@ class Board extends Component {
 
     checkTouchRight() {
         return this.state.nowTetromino.locationList[this.state.nowTetromino.rotationIdx]
-                .filter((point) => point[0] >= 0 && point[1] + 1 >= this.state.colCnt && (point[1] + 1 === this.state.colCnt || this.state.testrisTable[point[0]][point[1] + 1] !== 'empty'))
+                .filter((point) => point[0] >= 0 && point[1] + 1 >= this.state.colCnt && (point[1] + 1 === this.state.colCnt || this.state.tetrisTable[point[0]][point[1] + 1] !== 'empty'))
                 .length > 0 ?  true : false;
     }
 
     checkTouchLeft() {
         return this.state.nowTetromino.locationList[this.state.nowTetromino.rotationIdx]
-                .filter((point) => point[0] >= 0 && (point[1] === 0 || this.state.testrisTable[point[0]][point[1] - 1] !== 'empty'))
+                .filter((point) => point[0] >= 0 && (point[1] === 0 || this.state.tetrisTable[point[0]][point[1] - 1] !== 'empty'))
                 .length > 0 ?  true : false;
     }
 
@@ -123,20 +128,21 @@ class Board extends Component {
             const targetTetromino = Object.assign({},this.state.nowTetromino);
 
             while(targetTetromino.locationList[targetTetromino.rotationIdx]
-                    .filter((point) => point[0] + 1 >= 0 && (point[0] + 1 === this.state.rowCnt || this.state.testrisTable[point[0] + 1][point[1]] !== 'empty'))
+                    .filter((point) => point[0] + 1 >= 0 && (point[0] + 1 === this.state.rowCnt || this.state.tetrisTable[point[0] + 1][point[1]] !== 'empty'))
                     .length === 0) {
                     moveCnt++;
                     targetTetromino.locationList = targetTetromino.locationList.map((location) => location.map((point) => [point[0] + 1, point[1]]));
             }
             const moveTetromino = this.moveTetromino(moveCnt, 0);
-            const testrisTable = this.state.testrisTable;
+            const tetrisTable = this.state.tetrisTable;
             moveTetromino.locationList[moveTetromino.rotationIdx].forEach((point) => {
                 if(point[0] >= 0) {
-                    testrisTable[point[0]][point[1]] = moveTetromino.type;
+                    tetrisTable[point[0]][point[1]] = moveTetromino.type;
                 }
             });
+            const [plusScore, newTetrisTable] = this.calculatePoint(tetrisTable);
             const [newTetromino, nextTetromino] = this.changeTetromino();
-            this.setState({nowTetromino: newTetromino, nextTetromino: nextTetromino, testrisTable: testrisTable});
+            this.setState({nowTetromino: newTetromino, nextTetromino: nextTetromino, tetrisTable: newTetrisTable, score: this.state.score + plusScore});
         }
     }
 
@@ -145,7 +151,7 @@ class Board extends Component {
         rotateTetromino.rotationIdx = (rotateTetromino.rotationIdx + 1) % rotateTetromino.locationList.length;
         
         if (rotateTetromino.locationList[rotateTetromino.rotationIdx]
-            .filter((point) => point[0] >= 20 ||point[1] < 0 || point[1] >= 10 || (point[0] >= 0 && this.state.testrisTable[point[0]][point[1]] !== 'empty'))
+            .filter((point) => point[0] >= 20 ||point[1] < 0 || point[1] >= 10 || (point[0] >= 0 && this.state.tetrisTable[point[0]][point[1]] !== 'empty'))
             .length === 0) {
                 this.setState({nowTetromino: rotateTetromino});
         }
@@ -170,6 +176,25 @@ class Board extends Component {
         }
     }
 
+    calculatePoint(tetrisTable) {
+        let plusScore = 0;
+        const fullRowList = [];
+        
+        tetrisTable.forEach((location, rowIdx) => {
+            if(location.filter((point) => point === 'empty').length === 0) {
+                fullRowList.push(rowIdx);
+            } 
+        });
+        if(fullRowList.length > 0) {
+            plusScore = fullRowList.length === 1 ? 100 : fullRowList.length === 2 ? 300 : fullRowList.length === 3 ? 600 : fullRowList.length === 4 ? 1000 : 0;
+            fullRowList.forEach((rowIdx) => {
+                tetrisTable.splice(rowIdx, 1);
+            });
+            tetrisTable.unshift(...Array.from(Array(fullRowList.length), () => Array.from(Array(10), () => 'empty')));
+        }
+        return [plusScore, tetrisTable];
+    }
+
     render() {
         return (
             <div className="board">
@@ -177,7 +202,7 @@ class Board extends Component {
                     <Title />
                     <div className="middle_area">
                         <div className="left_area">
-                            <Tetris testrisTable={this.state.testrisTable} nowTetromino={this.state.nowTetromino}/>
+                            <Tetris tetrisTable={this.state.tetrisTable} nowTetromino={this.state.nowTetromino}/>
                         </div>
                         <div  className="right_area">
                             <Score score={this.state.score}/>
