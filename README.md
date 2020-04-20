@@ -102,8 +102,8 @@
    ![wireframe](./wireframe.JPG)
    
 4.  참고
-   - [설계 및 퍼블리싱](https://www.figma.com/file/yoOCik1e4GCMHbwmjjotMC/Tetris-Toy-Project-of--limjs?node-id=0%3A1)
-   - [repository](https://github.com/LIMJONGSOO/Tetris.git)
+   - [기획,설계 및 퍼블리싱(figma)](https://www.figma.com/file/yoOCik1e4GCMHbwmjjotMC/Tetris-Toy-Project-of--limjs?node-id=0%3A1)
+   - [source repository](https://github.com/LIMJONGSOO/Tetris.git)
 
 5. 버전업 필요사항
     - 점수에 따른 Tetromino 내려오는 속도 증가 로직
