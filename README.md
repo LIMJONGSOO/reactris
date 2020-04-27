@@ -102,7 +102,7 @@
    ![wireframe](./wireframe.JPG)
    
 4.  참고
-   - [기획,설계 및 퍼블리싱(figma)](https://www.figma.com/file/yoOCik1e4GCMHbwmjjotMC/Tetris-Toy-Project-of--limjs?node-id=0%3A1)
+   - [기획,설계 및 퍼블리싱(figma)](https://www.figma.com/file/dhOKFu05fzklMjIJBXcU1s/Reactris?node-id=0%3A1)
    - [source repository](https://github.com/LIMJONGSOO/Tetris.git)
 
 5. 버전업 필요사항
