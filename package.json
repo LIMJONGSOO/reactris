@@ -33,7 +33,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://https://limjongsoo.github.io/reactris",
+  "homepage": "https://limjongsoo.github.io/reactris",
   "devDependencies": {
     "gh-pages": "^2.2.0"
   }
